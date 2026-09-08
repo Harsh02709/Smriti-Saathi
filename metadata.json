@@ -1,0 +1,11 @@
+{
+  "name": "Remix Smriti-Saathi-2",
+  "description": "Imported from GitHub: hmahawar460/Smriti-Saathi-2",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
