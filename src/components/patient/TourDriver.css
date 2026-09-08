@@ -1,0 +1,428 @@
+/* ============================================================
+   TourDriver.css — Guided Tour isolated styles
+   All class names prefixed with .tour- or .cat-card-- to avoid
+   collisions with existing PatientHome / global styles.
+   ============================================================ */
+
+/* ── Overlay & Backdrop ────────────────────────────────────── */
+.tour-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.tour-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* ── Tooltip bubble ────────────────────────────────────────── */
+.tour-tooltip {
+  position: absolute;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.20), 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px 20px 18px;
+  z-index: 10001;
+  pointer-events: auto;
+  font-family: inherit;
+  animation: tourFadeIn 0.22s ease;
+}
+
+.tour-tooltip__top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+/* Purple pill — "चरण 1" */
+.tour-tooltip__step-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #6d28d9;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 99px;
+  padding: 5px 14px;
+  letter-spacing: 0.2px;
+}
+
+/* Grey outlined voice button — "आवाज़ लें" */
+.tour-voice-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 99px;
+  border: 1.5px solid #cbd5e1;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.tour-voice-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.tour-tooltip__title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1e3a5f;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.tour-tooltip__desc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0 0 16px 0;
+  line-height: 1.55;
+}
+
+/* ── Progress row (1/6 + line) ─────────────────────────────── */
+.tour-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tour-progress-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #001A4C;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tour-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.tour-progress-fill {
+  height: 100%;
+  background: #001A4C;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* ── Action buttons ────────────────────────────────────────── */
+.tour-btn-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Grey rounded pill Skip button */
+.tour-skip-btn {
+  flex: 1;
+  padding: 12px 10px;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.tour-skip-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* Blue pill Start button with gold ring */
+.tour-start-btn {
+  flex: 2;
+  padding: 12px 14px;
+  border: 3px solid #f59e0b;
+  background: #001A4C;
+  color: #fff;
+  border-radius: 99px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  animation: tourTooltipBtnPulse 2.2s ease-in-out infinite;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.tour-start-btn:hover {
+  background: #002D80;
+  animation: none;
+  opacity: 0.95;
+}
+
+/* ── Card highlight ────────────────────────────────────────── */
+.tour-highlight {
+  border: 2.5px solid #0d9488 !important;
+  border-radius: 16px;
+  animation: tourCardGlow 1.8s ease-in-out infinite;
+  position: relative;
+  z-index: 10002;
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes tourCardGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(13, 148, 136, 0.08);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.25);
+  }
+}
+
+@keyframes tourTooltipBtnPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+  }
+  50% {
+    transform: scale(1.025);
+    box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.12);
+  }
+}
+
+@keyframes tourFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Card completion / skip badges ────────────────────────── */
+.cat-card--completed {
+  position: relative;
+}
+
+.cat-card--completed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(20, 184, 166, 0.08);
+  pointer-events: none;
+}
+
+.cat-card__done-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+.cat-card--skipped {
+  position: relative;
+}
+
+.cat-card--skipped::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: rgba(245, 158, 11, 0.08);
+  pointer-events: none;
+}
+
+.cat-card__skip-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #d97706;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+}
+
+/* ── Pending panel ─────────────────────────────────────────── */
+.pending-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  width: 240px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  z-index: 9999;
+  overflow: hidden;
+  animation: tourFadeIn 0.25s ease;
+}
+
+.pending-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px 8px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pending-panel__header-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pending-panel__close {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.pending-panel__close:hover {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.pending-panel__list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.pending-panel__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+.pending-panel__item-name {
+  color: #334155;
+  font-weight: 500;
+}
+
+.pending-panel__item-link {
+  color: #0d9488;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.pending-panel__item-link:hover {
+  color: #0f766e;
+}
+
+/* ── Celebration modal ─────────────────────────────────────── */
+.tour-celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 10002;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.celebration-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.22);
+  animation: tourFadeIn 0.3s ease;
+}
+
+.celebration-content__icon {
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.celebration-content__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+
+.celebration-content__desc {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 24px;
+  line-height: 1.6;
+}
+
+.celebration-close-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #0d9488, #14b8a6);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.celebration-close-btn:hover {
+  opacity: 0.9;
+}

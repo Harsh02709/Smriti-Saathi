@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="50" fill="url(#avBg)" />
+  <circle cx="50" cy="38" r="18" fill="#FDE68A" />
+  <path d="M 22 84 Q 50 60 78 84" fill="#60A5FA" />
+  <circle cx="44" cy="36" r="2.5" fill="#1E293B" />
+  <circle cx="56" cy="36" r="2.5" fill="#1E293B" />
+  <path d="M 46 44 Q 50 48 54 44" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" />
+  <!-- Stethoscope / Care badge -->
+  <circle cx="70" cy="30" r="10" fill="#10B981" />
+  <text x="70" y="34" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#FFFFFF">🧠</text>
+</svg>

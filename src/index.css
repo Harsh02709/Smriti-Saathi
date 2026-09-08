@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', 'Lexend', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@keyframes tealGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(29, 78, 216, 0.8), 0 0 30px rgba(20, 184, 166, 0.3), inset 0 0 8px rgba(255, 255, 255, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(29, 78, 216, 0.8), 0 0 45px rgba(20, 184, 166, 0.6), inset 0 0 12px rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes blueGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(29, 78, 216, 0.45), 0 0 30px rgba(0, 31, 84, 0.35);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(29, 78, 216, 0.8), 0 0 45px rgba(37, 99, 235, 0.55);
+    transform: scale(1.02);
+  }
+}
+
+.btn-glow-teal {
+  animation: tealGlowPulse 2.2s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.btn-glow-teal:hover {
+  animation-duration: 1.2s;
+  box-shadow: 0 0 35px rgba(13, 115, 119, 0.95), 0 0 55px rgba(20, 184, 166, 0.75) !important;
+}
+
+.btn-glow-blue {
+  animation: blueGlowPulse 2.2s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.btn-glow-blue:hover {
+  animation-duration: 1.2s;
+  box-shadow: 0 0 35px rgba(29, 78, 216, 0.95), 0 0 55px rgba(37, 99, 235, 0.75) !important;
+}

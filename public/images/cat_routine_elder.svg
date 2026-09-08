@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="routBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECFDF5" />
+      <stop offset="100%" stop-color="#D1FAE5" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#routBg)" rx="16" />
+  <g transform="translate(60, 30)">
+    <!-- Clock & Medicine Reminder Routine -->
+    <circle cx="80" cy="90" r="55" fill="#FFFFFF" stroke="#059669" stroke-width="4" />
+    <circle cx="80" cy="90" r="4" fill="#059669" />
+    <line x1="80" y1="90" x2="80" y2="55" stroke="#059669" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="80" y1="90" x2="105" y2="90" stroke="#059669" stroke-width="3" stroke-linecap="round" />
+    <!-- Routine Checklist Cards -->
+    <rect x="160" y="30" width="120" height="38" rx="10" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1.5" />
+    <text x="175" y="54" font-family="sans-serif" font-size="14">💊 सुबह की दवा</text>
+    <rect x="160" y="80" width="120" height="38" rx="10" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1.5" />
+    <text x="175" y="104" font-family="sans-serif" font-size="14">☕ सुबह का नाश्ता</text>
+    <rect x="160" y="130" width="120" height="38" rx="10" fill="#FFFFFF" stroke="#6EE7B7" stroke-width="1.5" />
+    <text x="175" y="154" font-family="sans-serif" font-size="14">🚶‍♂️ दोपहर की सैर</text>
+  </g>
+</svg>

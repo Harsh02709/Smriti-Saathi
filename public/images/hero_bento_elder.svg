@@ -1,0 +1,325 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="100%" height="100%">
+  <defs>
+    <!-- Shading & Lighting Gradients -->
+    <!-- Armchair Material -->
+    <linearGradient id="chairBack" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#C5D7E8" />
+      <stop offset="50%" stop-color="#ABC3D9" />
+      <stop offset="100%" stop-color="#8FAEC7" />
+    </linearGradient>
+    <linearGradient id="chairArmLeft" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#D2E2F0" />
+      <stop offset="60%" stop-color="#ADC6DC" />
+      <stop offset="100%" stop-color="#8BAEC9" />
+    </linearGradient>
+    <linearGradient id="chairArmRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0D5E7" />
+      <stop offset="50%" stop-color="#9CB8D1" />
+      <stop offset="100%" stop-color="#7B9BB7" />
+    </linearGradient>
+    <linearGradient id="chairSeat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#B2CBDE" />
+      <stop offset="100%" stop-color="#80A3BE" />
+    </linearGradient>
+
+    <!-- Royal Blue Sweater -->
+    <linearGradient id="sweaterBody" x1="20%" y1="10%" x2="80%" y2="90%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="40%" stop-color="#1D4ED8" />
+      <stop offset="85%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    <linearGradient id="sweaterHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#1D4ED8" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="sweaterArmR" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#1E3A8A" />
+    </linearGradient>
+
+    <!-- Khaki Chinos / Trousers -->
+    <linearGradient id="khakiLegs" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#EEDCC6" />
+      <stop offset="35%" stop-color="#DEC5A4" />
+      <stop offset="80%" stop-color="#CBB18B" />
+      <stop offset="100%" stop-color="#B3936B" />
+    </linearGradient>
+
+    <!-- Warm Skin Tone -->
+    <linearGradient id="skinBase" x1="30%" y1="10%" x2="70%" y2="90%">
+      <stop offset="0%" stop-color="#FFF0E5" />
+      <stop offset="40%" stop-color="#FDE2CD" />
+      <stop offset="85%" stop-color="#F5C7A4" />
+      <stop offset="100%" stop-color="#EAB38B" />
+    </linearGradient>
+    <linearGradient id="skinShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E7A87A" />
+      <stop offset="100%" stop-color="#C9814E" />
+    </linearGradient>
+
+    <!-- Hair Tone -->
+    <linearGradient id="silverHair" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#F1F5F9" />
+      <stop offset="85%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Tablet Back Case -->
+    <linearGradient id="tabletCase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="45%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Filters for Realism and Drop Shadows -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.1" />
+    </filter>
+    <filter id="gentleDepth" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Ground Ambient Contact Shadow -->
+  <ellipse cx="490" cy="850" rx="340" ry="38" fill="#0F172A" fill-opacity="0.09" filter="url(#softShadow)" />
+
+  <!-- 1. PLUSH LIGHT BLUE ARMCHAIR (Sitting slightly turned to the right) -->
+  <g id="plush-armchair">
+    <!-- Backrest Curved Shell -->
+    <path d="M 370 240 C 400 230, 700 240, 770 260 C 830 330, 860 480, 840 590 C 780 610, 390 600, 340 570 C 330 460, 340 310, 370 240 Z" fill="url(#chairBack)" />
+    <!-- Backrest Inner Cushion Stitch & Depth Arc -->
+    <path d="M 400 265 C 440 250, 680 260, 730 280 C 770 340, 790 450, 770 530 C 720 545, 410 545, 370 515 C 365 420, 375 315, 400 265 Z" fill="#BFD6EA" opacity="0.65" />
+
+    <!-- Left Armrest (Viewer's Left - Behind elder's right side) -->
+    <path d="M 170 600 C 140 520, 160 440, 200 400 C 235 365, 275 385, 290 440 C 300 500, 305 570, 290 620 C 255 635, 190 635, 170 600 Z" fill="url(#chairArmLeft)" />
+    <path d="M 180 580 C 160 520, 180 445, 215 410 C 240 380, 270 400, 280 445 C 285 490, 285 550, 270 590 C 240 605, 195 605, 180 580 Z" fill="#D6E5F3" opacity="0.7" />
+
+    <!-- Armchair Main Seat Base -->
+    <path d="M 230 615 C 270 600, 760 600, 800 620 C 805 700, 780 780, 720 830 L 310 830 C 250 780, 225 700, 230 615 Z" fill="url(#chairSeat)" />
+    <!-- Front Seat Cushion Bullnose -->
+    <path d="M 240 615 C 310 605, 710 605, 780 620 C 785 660, 770 700, 750 710 C 690 725, 330 725, 270 710 C 250 700, 235 660, 240 615 Z" fill="#C2D8EB" />
+
+    <!-- Right Armrest (Viewer's Right - Large rounded roll arm) -->
+    <path d="M 640 440 C 670 410, 750 420, 780 465 C 810 520, 820 600, 795 670 C 770 720, 680 730, 645 680 C 625 630, 620 500, 640 440 Z" fill="url(#chairArmRight)" />
+    <path d="M 655 455 C 680 430, 740 435, 765 475 C 785 520, 795 590, 775 645 C 755 685, 690 690, 665 650 C 645 610, 640 495, 655 455 Z" fill="#D4E4F2" opacity="0.65" />
+  </g>
+
+  <!-- 2. ELDER FIGURE (Angle: 3/4 turned to the right, looking down at tablet) -->
+  <g id="elder-companion">
+    <!-- KHAKI CHINOS / TROUSERS (Legs positioned seated) -->
+    <g id="legs-khaki">
+      <!-- Left Leg (Viewer's Left) -->
+      <path d="M 285 630 C 310 620, 420 620, 440 640 C 445 700, 430 770, 410 850 L 305 850 C 275 770, 270 700, 285 630 Z" fill="url(#khakiLegs)" />
+      <!-- Creases & Highlights Left Leg -->
+      <path d="M 330 655 C 345 710, 340 780, 325 840" stroke="#B89B77" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6" />
+      <path d="M 390 660 C 400 720, 395 790, 385 845" stroke="#B89B77" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 285 690 C 320 710, 370 710, 405 690" stroke="#B89B77" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4" />
+      <path d="M 290 745 C 325 765, 365 765, 400 745" stroke="#B89B77" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+      <!-- Right Leg (Viewer's Right) -->
+      <path d="M 445 640 C 465 625, 570 635, 575 650 C 585 715, 580 780, 560 850 L 455 850 C 435 770, 430 705, 445 640 Z" fill="url(#khakiLegs)" />
+      <!-- Creases & Highlights Right Leg -->
+      <path d="M 485 660 C 495 720, 490 790, 480 845" stroke="#B89B77" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6" />
+      <path d="M 545 665 C 555 725, 550 795, 535 845" stroke="#B89B77" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 445 700 C 475 720, 520 720, 555 700" stroke="#B89B77" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.4" />
+      <path d="M 450 755 C 480 775, 520 775, 550 755" stroke="#B89B77" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+      <!-- Center Lap Crotch Depth Shadow -->
+      <path d="M 410 630 C 435 655, 445 655, 470 630 C 455 690, 425 690, 410 630 Z" fill="#997753" opacity="0.5" />
+    </g>
+
+    <!-- TORSO & ROYAL BLUE V-NECK SWEATER -->
+    <g id="royal-blue-sweater">
+      <!-- Main Torso Shape -->
+      <path d="M 370 300 C 410 270, 580 270, 620 310 C 670 360, 685 480, 675 605 C 590 625, 430 625, 345 605 C 335 485, 340 355, 370 300 Z" fill="url(#sweaterBody)" />
+      <!-- Soft Upper Body Highlight -->
+      <path d="M 390 310 C 430 280, 570 280, 605 320 C 630 360, 635 470, 620 540 C 560 555, 450 555, 385 540 C 375 460, 370 360, 390 310 Z" fill="url(#sweaterHighlight)" />
+
+      <!-- Bottom Ribbed Hem -->
+      <path d="M 345 595 C 430 615, 590 615, 675 595 L 675 615 C 590 635, 430 635, 345 615 Z" fill="#172554" />
+      <line x1="360" y1="605" x2="660" y2="605" stroke="#2563EB" stroke-width="1.5" opacity="0.4" stroke-dasharray="3,3" />
+
+      <!-- CRISP WHITE DRESS SHIRT COLLAR (Open at neck) -->
+      <g id="white-collar">
+        <polygon points="455,275 525,275 490,325" fill="#E2E8F0" />
+        <!-- Left Collar Lapel -->
+        <polygon points="445,268 490,305 455,340 430,295" fill="#FFFFFF" filter="url(#gentleDepth)" />
+        <polygon points="445,268 490,305 455,340 430,295" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+        <!-- Right Collar Lapel -->
+        <polygon points="535,268 490,305 525,340 550,295" fill="#FFFFFF" filter="url(#gentleDepth)" />
+        <polygon points="535,268 490,305 525,340 550,295" stroke="#CBD5E1" stroke-width="1.5" fill="none" />
+        <!-- Shirt Placket Center & Button -->
+        <line x1="490" y1="305" x2="490" y2="355" stroke="#CBD5E1" stroke-width="2" />
+        <circle cx="490" cy="330" r="2.5" fill="#94A3B8" />
+      </g>
+
+      <!-- Royal Blue V-Neck Trim -->
+      <path d="M 435,285 L 490,360 L 545,285 L 535,275 L 490,342 L 445,275 Z" fill="#1E3A8A" stroke="#172554" stroke-width="2" />
+      <path d="M 450,295 L 490,350 L 530,295" stroke="#3B82F6" stroke-width="2" fill="none" opacity="0.65" />
+    </g>
+
+    <!-- RIGHT ARM (Viewer's Right - Upper arm coming down, forearm raised with index finger pointing to tablet) -->
+    <g id="right-arm-tapping">
+      <!-- Upper Arm -->
+      <path d="M 605 325 C 640 370, 665 440, 655 500 C 630 515, 595 505, 580 460 C 570 410, 575 360, 605 325 Z" fill="url(#sweaterArmR)" />
+      <!-- Forearm raised towards tablet -->
+      <path d="M 645 480 C 635 520, 585 545, 530 545 C 500 545, 480 520, 490 495 C 530 485, 590 470, 645 480 Z" fill="url(#sweaterArmR)" />
+      <!-- Ribbed Cuff -->
+      <rect x="495" y="495" width="22" height="34" rx="5" transform="rotate(25 506 512)" fill="#1E3A8A" stroke="#172554" stroke-width="1.5" />
+
+      <!-- HAND TAPPING TABLET (Natural gesture) -->
+      <!-- Palm / Back of Hand -->
+      <path d="M 480 475 C 500 460, 520 480, 515 505 C 505 525, 480 530, 465 515 C 460 495, 465 480, 480 475 Z" fill="url(#skinBase)" stroke="#E5A679" stroke-width="1.2" />
+      <!-- Curled Middle, Ring, Pinky Fingers -->
+      <ellipse cx="485" cy="505" rx="8" ry="11" transform="rotate(20 485 505)" fill="url(#skinBase)" />
+      <ellipse cx="475" cy="515" rx="7" ry="10" transform="rotate(15 475 515)" fill="url(#skinBase)" />
+      <ellipse cx="465" cy="522" rx="6" ry="9" transform="rotate(10 465 522)" fill="url(#skinBase)" />
+      <!-- EXTENDED INDEX FINGER (Touching top edge / surface of tablet) -->
+      <path d="M 470 478 C 455 465, 440 455, 425 455 C 418 455, 415 463, 420 470 C 430 478, 445 485, 465 490 Z" fill="url(#skinBase)" stroke="#E5A679" stroke-width="1.5" />
+      <!-- Index Finger Nail -->
+      <path d="M 422 458 C 419 460, 419 466, 423 468" stroke="#FFFFFF" stroke-width="1.2" fill="none" opacity="0.8" />
+      <!-- Thumb curled underneath -->
+      <ellipse cx="492" cy="485" rx="7" ry="10" transform="rotate(-30 492 485)" fill="url(#skinBase)" />
+    </g>
+
+    <!-- LEFT ARM & HAND (Viewer's Left - Holding tablet by the left side) -->
+    <g id="left-arm-holding">
+      <!-- Upper Arm coming down -->
+      <path d="M 355 330 C 330 380, 310 440, 305 510 C 320 525, 350 515, 360 470 C 370 420, 380 370, 355 330 Z" fill="url(#sweaterBody)" />
+      <!-- Forearm extending to grip tablet -->
+      <path d="M 310 490 C 300 520, 335 550, 375 550 C 400 550, 415 525, 405 505 C 375 495, 335 480, 310 490 Z" fill="url(#sweaterBody)" />
+      <!-- Ribbed Cuff -->
+      <rect x="365" y="500" width="22" height="34" rx="5" transform="rotate(-30 376 517)" fill="#1E3A8A" stroke="#172554" stroke-width="1.5" />
+
+      <!-- Hand Gripping Left Edge of Tablet -->
+      <path d="M 380 485 C 395 475, 410 490, 405 515 C 395 535, 375 540, 360 525 Z" fill="url(#skinBase)" stroke="#E5A679" stroke-width="1.2" />
+      <!-- Fingers wrapped around bezel -->
+      <ellipse cx="388" cy="492" rx="7" ry="11" transform="rotate(15 388 492)" fill="url(#skinBase)" />
+      <ellipse cx="390" cy="510" rx="7" ry="11" transform="rotate(10 390 510)" fill="url(#skinBase)" />
+      <ellipse cx="388" cy="528" rx="6" ry="10" transform="rotate(5 388 528)" fill="url(#skinBase)" />
+    </g>
+
+    <!-- 3. THE TABLET (Held angled in front - Viewer sees BACK of tablet!) -->
+    <g id="tablet-device" filter="url(#softShadow)">
+      <!-- Outer Tablet Matte Slate Body (Tilted forward ~25 degrees) -->
+      <rect x="345" y="385" width="180" height="150" rx="14" transform="rotate(18 435 460)" fill="url(#tabletCase)" stroke="#475569" stroke-width="2.5" />
+      
+      <!-- Subtle Bevel Highlight on Tablet Top Edge -->
+      <path d="M 328 412 L 485 464" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+      <!-- Rear Camera Module (Small round lens on top-left of back case) -->
+      <circle cx="375" cy="415" r="5" fill="#0F172A" stroke="#334155" stroke-width="1" />
+      <circle cx="375" cy="415" r="2.5" fill="#1E3A8A" />
+      <circle cx="374" cy="414" r="0.8" fill="#93C5FD" />
+
+      <!-- Matte Texture Gradient Overlay on Back -->
+      <rect x="355" y="395" width="160" height="130" rx="8" transform="rotate(18 435 460)" fill="#1E293B" opacity="0.35" />
+    </g>
+
+    <!-- 4. ELDER'S HEAD & EXPRESSION (Turned 3/4 right, looking down-right towards tablet with warm joyful smile) -->
+    <g id="head-and-face">
+      <!-- Neck -->
+      <rect x="475" y="225" width="45" height="55" rx="12" fill="url(#skinBase)" />
+      <path d="M 470 250 C 485 275, 520 275, 530 250 Z" fill="url(#skinShadow)" opacity="0.4" />
+
+      <!-- Head Base Structure -->
+      <ellipse cx="495" cy="180" rx="68" ry="78" fill="url(#skinBase)" />
+      
+      <!-- Cheeks & Chin Soft Blush -->
+      <ellipse cx="465" cy="200" rx="18" ry="12" fill="#F43F5E" opacity="0.12" />
+      <ellipse cx="535" cy="205" rx="18" ry="12" fill="#F43F5E" opacity="0.12" />
+
+      <!-- SILVER-WHITE COMBED HAIR (Full volume, parted on his right) -->
+      <g id="hair">
+        <!-- Main Hair Volume Outline -->
+        <path d="M 425 175 C 415 110, 460 70, 520 70 C 585 70, 615 110, 605 170 C 615 195, 600 220, 585 220 C 580 185, 580 140, 560 115 C 530 90, 465 95, 445 125 C 435 145, 435 180, 425 175 Z" fill="url(#silverHair)" filter="url(#gentleDepth)" />
+        
+        <!-- Hair Parting Strands & Flow Texture -->
+        <path d="M 460 95 C 485 85, 545 85, 570 105" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        <path d="M 445 115 C 475 100, 555 105, 585 130" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        <path d="M 435 145 C 455 130, 515 125, 555 145" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+        <path d="M 570 120 C 590 140, 595 170, 590 195" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+        <path d="M 430 155 C 420 180, 425 200, 435 210" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" fill="none" />
+      </g>
+
+      <!-- EARS -->
+      <!-- Left Ear (Viewer's Left) -->
+      <ellipse cx="426" cy="188" rx="10" ry="16" fill="url(#skinBase)" stroke="#E5A679" stroke-width="1.2" />
+      <path d="M 424 180 C 422 188, 426 195, 428 195" stroke="#C9814E" stroke-width="1.5" fill="none" />
+
+      <!-- Right Ear (Viewer's Right) -->
+      <ellipse cx="578" cy="192" rx="11" ry="17" fill="url(#skinBase)" stroke="#E5A679" stroke-width="1.2" />
+      <path d="M 576 185 C 580 192, 578 200, 575 200" stroke="#C9814E" stroke-width="1.5" fill="none" />
+
+      <!-- GENTLE LAUGH LINES & FOREHEAD EXPRESSION -->
+      <path d="M 470 125 C 490 120, 520 120, 540 125" stroke="#E0A37A" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6" />
+      <path d="M 475 135 C 495 130, 515 130, 535 135" stroke="#E0A37A" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.5" />
+
+      <!-- EYEBROWS (White / Light Grey arched gently) -->
+      <path d="M 455 152 C 470 147, 485 150, 492 155" stroke="#E2E8F0" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 455 152 C 470 147, 485 150, 492 155" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+      <path d="M 520 155 C 530 150, 550 147, 565 153" stroke="#E2E8F0" stroke-width="4.5" stroke-linecap="round" fill="none" />
+      <path d="M 520 155 C 530 150, 550 147, 565 153" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4" />
+
+      <!-- NOSE -->
+      <path d="M 505 160 C 512 175, 512 188, 502 195 C 495 198, 515 198, 520 195" stroke="#D99468" stroke-width="2" stroke-linecap="round" fill="none" />
+      <ellipse cx="508" cy="192" rx="7" ry="5" fill="#F8BC93" />
+
+      <!-- JOYFUL OPEN SMILE (Showing upper teeth) -->
+      <g id="smile">
+        <!-- Open Mouth Cavity -->
+        <path d="M 475 220 C 490 248, 530 248, 545 220 C 530 226, 490 226, 475 220 Z" fill="#6B1D2F" />
+        <!-- Tongue -->
+        <ellipse cx="510" cy="236" rx="14" ry="7" fill="#E11D48" opacity="0.75" />
+        <!-- Upper Teeth -->
+        <path d="M 480 221 C 495 228, 525 228, 540 221 L 536 226 C 522 231, 498 231, 484 226 Z" fill="#FFFFFF" />
+        <!-- Upper Lip Edge -->
+        <path d="M 472 219 C 495 225, 525 225, 548 219" stroke="#E08B6B" stroke-width="2" stroke-linecap="round" fill="none" />
+      </g>
+
+      <!-- WHITE MUSTACHE (Curving over upper lip and smile) -->
+      <g id="mustache">
+        <path d="M 508 198 C 495 198, 465 210, 460 225 C 475 225, 495 215, 508 208 C 520 215, 540 225, 555 225 C 550 210, 520 198, 508 198 Z" fill="#FFFFFF" filter="url(#gentleDepth)" />
+        <path d="M 508 198 C 495 198, 465 210, 460 225" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" fill="none" />
+        <path d="M 508 198 C 520 198, 550 210, 555 225" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" fill="none" />
+      </g>
+
+      <!-- EYEGLASSES & EYES (Round black wireframe glasses angled towards tablet) -->
+      <g id="glasses-and-eyes">
+        <!-- Left Lens (Viewer's Left) -->
+        <circle cx="475" cy="172" r="22" stroke="#0F172A" stroke-width="3.5" fill="#FFFFFF" fill-opacity="0.35" />
+        <!-- Right Lens (Viewer's Right) -->
+        <circle cx="535" cy="174" r="22" stroke="#0F172A" stroke-width="3.5" fill="#FFFFFF" fill-opacity="0.35" />
+        <!-- Glasses Center Nose Bridge -->
+        <path d="M 497 172 C 505 168, 513 168, 521 172" stroke="#0F172A" stroke-width="3.5" stroke-linecap="round" fill="none" />
+        <!-- Glasses Left Temple to Ear -->
+        <path d="M 453 172 L 430 178" stroke="#0F172A" stroke-width="3" stroke-linecap="round" />
+        <!-- Glasses Right Temple to Ear -->
+        <path d="M 557 174 L 576 182" stroke="#0F172A" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Lens Glare Reflection Accent -->
+        <path d="M 465 158 Q 485 158 488 175" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75" />
+        <path d="M 525 160 Q 545 160 548 177" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.75" />
+
+        <!-- Smiling Eyes looking down-right towards tablet screen -->
+        <!-- Left Eye (Happy crescent looking down) -->
+        <path d="M 465 174 C 470 170, 480 170, 485 174" stroke="#1E293B" stroke-width="3" stroke-linecap="round" fill="none" />
+        <circle cx="476" cy="175" r="3.5" fill="#1E293B" />
+        <circle cx="475" cy="174" r="1.2" fill="#FFFFFF" />
+
+        <!-- Right Eye (Happy crescent looking down) -->
+        <path d="M 525 176 C 530 172, 540 172, 545 176" stroke="#1E293B" stroke-width="3" stroke-linecap="round" fill="none" />
+        <circle cx="536" cy="177" r="3.5" fill="#1E293B" />
+        <circle cx="535" cy="176" r="1.2" fill="#FFFFFF" />
+
+        <!-- Eye Corner Crow's Feet / Smile Wrinkles -->
+        <path d="M 450 172 L 443 169 M 450 176 L 442 176 M 451 180 L 444 183" stroke="#D99468" stroke-width="1.2" stroke-linecap="round" />
+        <path d="M 559 174 L 566 171 M 559 178 L 567 178 M 558 182 L 565 185" stroke="#D99468" stroke-width="1.2" stroke-linecap="round" />
+      </g>
+    </g>
+  </g>
+</svg>
